@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1080559700458",
+    "project_id": "adf-job-timer",
+    "storage_bucket": "adf-job-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080559700458:android:70fdd118fc1dd4b7e18a93",
+        "android_client_info": {
+          "package_name": "br.com.userfunction.job_timer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080559700458-a5gva0rgmbs8dkksaiolp1gls43qba6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCUE3JoXgQekyoYmfCf1dLcW4BM8pjHdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080559700458-a5gva0rgmbs8dkksaiolp1gls43qba6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
