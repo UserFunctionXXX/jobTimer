@@ -1,5 +1,5 @@
 name: job_timer
-description: A new Flutter project.
+description: APP para controlar progresso dos projetos 
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -58,9 +58,6 @@ dependencies:
   google_sign_in: ^5.3.3
   # Firebase end
 
-
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,6 +70,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   isar_generator: 2.5.0
   build_runner: ^2.1.11
+  
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -86,8 +85,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,10 +100,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: JobTimerIcons
+      fonts:
+        - asset: assets/fonts/JobTimerIcons.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
