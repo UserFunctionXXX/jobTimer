@@ -9,10 +9,11 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: AppConfigUI.theme,
       title: 'Job Timer',
       builder: asuka.builder,
-        routeInformationParser: Modular.routeInformationParser,
-        routerDelegate: Modular.routerDelegate);
+      theme: AppConfigUI.theme,
+      routeInformationParser: Modular.routeInformationParser,
+      routerDelegate: Modular.routerDelegate,
+    );
   }
 }
