@@ -21,6 +21,7 @@ class HomeController extends Cubit<HomeState> {
     try {
       emit(state.copyWith(status: HomeStatus.loading));
       final projects = await _projectService.findByStatus(state.projectFilter);
+      //throw Exception();
       emit(state.copyWith(status: HomeStatus.complete, projects: projects));
     } catch (e, s) {
       log('Erro ao buscar os projetos',error:e, stackTrace:s);

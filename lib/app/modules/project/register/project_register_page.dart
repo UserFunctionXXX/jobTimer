@@ -40,7 +40,7 @@ class _ProjectRegisterPageState extends State<ProjectRegisterPage> {
         switch (state) {
           case ProjectRegisterStatus.success:
             AsukaSnackbar.success('Projeto cadastrado com sucesso').show();
-            Modular.to.pop();
+            Modular.to.pop(true);
             break;
           case ProjectRegisterStatus.failure:
             AsukaSnackbar.alert('Erro ao cadastrar projeto').show();
