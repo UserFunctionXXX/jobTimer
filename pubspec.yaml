@@ -37,15 +37,17 @@ dependencies:
 
   # Modular start
   flutter_modular: ^5.0.3
-  modular_bloc_bind: ^1.0.1
   # Modular end
   
   # General start
   validatorless: ^1.2.1
   fl_chart: ^0.51.0
   asuka: ^2.0.0+1
+  # Modular start
   bloc: ^8.0.3
+  modular_bloc_bind: ^1.0.1
   flutter_bloc: ^8.0.1
+  # Modular end
   equatable: ^2.0.3
   isar: ^2.5.0 #(noSQL)
   isar_flutter_libs: 2.5.0 # contains the binaries
