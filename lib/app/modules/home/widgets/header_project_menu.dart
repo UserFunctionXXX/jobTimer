@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:job_timer/app/entities/project_status.dart';
+import 'package:job_timer/app/modules/home/controller/home_controller.dart';
 
 class HeaderProjectMenu extends SliverPersistentHeaderDelegate {
+  final controller = Modular.get<HomeController>();
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -17,26 +19,34 @@ class HeaderProjectMenu extends SliverPersistentHeaderDelegate {
             SizedBox(
               width: constrains.maxWidth * .5,
               child: DropdownButtonFormField<ProjectStatus>(
+                value: ProjectStatus.em_andamento,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                     contentPadding: EdgeInsets.all(10),
                     isCollapsed: true),
-                items: ProjectStatus.values.map(
-                  (e) => DropdownMenuItem(
-                    value: e,
-                    child: Text(e.label),
-                  ),
-                ).toList(),
-                onChanged: (value) {},
+                items: ProjectStatus.values
+                    .map(
+                      (e) => DropdownMenuItem(
+                        value: e,
+                        child: Text(e.label),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (projectStatus) {
+                  if (projectStatus != null) {
+                    controller.filter(projectStatus);
+                  }
+                },
               ),
             ),
             SizedBox(
               width: constrains.maxWidth * .4,
               child: ElevatedButton.icon(
-                onPressed: () {
-                  Modular.to.pushNamed('/project/register/');
+                onPressed: () async {
+                  await Modular.to.pushNamed('/project/register/');
+                  controller.loadProjects();
                 },
                 icon: Icon(Icons.add),
                 label: Text('Novo Projeto'),
